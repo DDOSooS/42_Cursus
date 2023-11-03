@@ -6,13 +6,13 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 21:11:19 by aghergho          #+#    #+#             */
-/*   Updated: 2023/10/31 22:38:01 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/03 21:58:51 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int strlcpy(char *dst, const char *src, size_t size)
+int ft_strlcpy(char *dst, const char *src, size_t size)
 {
     size_t i;
     size_t len;

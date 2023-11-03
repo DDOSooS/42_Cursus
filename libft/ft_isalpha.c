@@ -6,13 +6,15 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 15:15:20 by aghergho          #+#    #+#             */
-/*   Updated: 2023/10/31 15:22:10 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/04 00:15:23 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int ft_isalpha(char c)
 {
-    if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
         return (1);
     return (0);
 }

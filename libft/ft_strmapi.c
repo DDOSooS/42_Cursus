@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 22:43:05 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/02 22:47:44 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/04 00:27:13 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    unsigned int i;
-    int                 len;
-    char *str;
+    unsigned int    i;
+    unsigned int    len;
+    char            *str;
 
     i = 0;
     len = ft_strlen(s);

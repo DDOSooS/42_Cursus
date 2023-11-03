@@ -6,15 +6,15 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 01:45:41 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/03 01:48:06 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:58:44 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list  *ft_lstlast(t_list *lst)
 {
-    t_list *tmp;
+    t_list  *tmp;
     if (!lst)
         return (NULL);
     tmp = lst;

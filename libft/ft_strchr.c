@@ -6,9 +6,11 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 22:38:40 by aghergho          #+#    #+#             */
-/*   Updated: 2023/10/31 22:48:10 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/03 21:53:31 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char *ft_strchr(const char *s, int c)
 {

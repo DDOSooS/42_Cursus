@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 21:22:28 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/01 15:52:02 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/03 21:50:50 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@ int ft_strlcat(char *dst, const char *src, size_t size)
     slen = ft_strlen(src);
     if (dlen >= size)
         return (size + slen);
-//|-----------------------------------/
-//|abdegher|9|gherghouch|10| 19 -8 -1 = 10/
-//|-----------------------------------/
     ft_memcpy(dst + dlen, src, size - dlen - 1);
     dst[dlen + slen] = '\0';
     return (dlen + slen);

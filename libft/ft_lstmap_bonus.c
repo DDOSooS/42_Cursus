@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:55:38 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/03 20:38:57 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/03 23:01:32 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-    t_list	*new;
+	t_list	*new;
 	t_list  *help;
 
 	if (!lst || !f || !del)
@@ -28,7 +28,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (!new)
 		{
 			ft_lstclear(&help,del);
-				return (NULL);
+			return (NULL);
 		}
 		new = new->next;
 		lst = lst->next;

@@ -6,13 +6,12 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:10:04 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/01 16:29:59 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:01:47 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
+
 char *ft_strdup(const char *s)
 {
     char    *new;
@@ -36,19 +35,16 @@ char *ft_strdup(const char *s)
     return (new);
 }
 
-// int main ()
-// {
-//     char *s = "testing my finction roel .";
-//     char *new;
-//     char *nnew;
-//     new = ft_strdup(s);
-//     if (!new)
-//         return (0);
-//     printf("%s\n", new);
-//     s = "testing my finction roel ";
-//     nnew = strdup(s);
-//     if (!nnew)
-//         return (0);
-//     printf("%s\n", nnew);
-//     return (0);
-// }
+
+/*=====================Testsing part===================
+int main ()
+{
+    char *s = "testing my finction  .";
+    char *new;
+    new = ft_strdup(s);
+    if (!new)
+        return (0);
+    printf("%s\n", new);
+    return (0);
+}
+=======================================================*/

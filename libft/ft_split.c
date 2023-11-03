@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 19:12:55 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/02 22:55:12 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:46:14 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,14 +66,14 @@ char **ft_split(char const *s, char c)
     return (words);
 }
 
-int main ()
-{
-    char *s;
-    char **words;
+// int main ()
+// {
+//     char *s;
+//     char **words;
 
-    s = "hello world ||||||||||||||||||||||||||||||sgfdsg|||||||||||||dsfffffffffgsdgfsdggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg|||||||||||||||||||||||||||||||||||||||||||||||||||||||";
-    words = ft_split(s,'|');
-    for (int i = 0; words[i]; i++)
-        printf("%s\n", words[i]);
-    return (0);
-}
+//     s = "hello world ||||||||||||||||||||||||||||||sgfdsg|||||||||||||dsfffffffffgsdgfsdggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg|||||||||||||||||||||||||||||||||||||||||||||||||||||||";
+//     words = ft_split(s,'|');
+//     for (int i = 0; words[i]; i++)
+//         printf("%s\n", words[i]);
+//     return (0);
+// }
