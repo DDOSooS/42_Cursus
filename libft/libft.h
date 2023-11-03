@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 15:25:39 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/03 01:33:18 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/03 17:33:20 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ char    *ft_itoa(int n);
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char    *ft_strtrim(char const *s1, char const *set);
 char    **ft_split(char const *str, char c);
-
+void    ft_bzero(void *buff, size_t n);
+int     ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif

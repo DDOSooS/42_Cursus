@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 01:55:22 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/03 02:08:34 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/03 18:49:27 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void ft_lstclear(t_list **lst, void (*del)(void *))
     *lst = NULL; 
 }
 
+/*====================Testing part===================
 int main ()
 {
     t_list *lst;
@@ -39,3 +40,4 @@ int main ()
     ft_lstclear(&lst, free);
     return (0);
 }
+*/
