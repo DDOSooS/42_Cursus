@@ -6,74 +6,103 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 19:12:55 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/03 22:46:14 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/04 15:39:38 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_count_words(char const *s, char c)
+void	ft_free(char **words, int size)
 {
-    int count;
-    int i;
+	int	i;
 
-    i = 0;
-    count = 0;
-    while (s[i])
-    {
-        while (s[i] && s[i] == c)
-            i++;
-        if (s[i])
-            count++;
-        while (s[i] && s[i]!= c)
-            i++;
-    }
-    return (count);
+	i = 0;
+	while (i < size)
+	{
+		free(words[i]);
+		i++;
+	}
+	free(words);
 }
 
-void    ft_gen_words(char **words,char const *s,char c)
+int	ft_count_words(char const *s, char c)
 {
-    int i;
-    int start;
-    int k;
+	int	count;
+	int	i;
 
-    k = 0;
-    i = 0;
-    while (s[i])
-    {
-        if (s[i] != c)
-        {
-            start = i;
-            while (s[i] && s[i] != c)
-                i++;
-            words[k] = ft_substr(s, start, i);
-            k++;
-        }
-        else
-            i++;
-    }
-    words[k] = NULL;
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i])
+			count++;
+		while (s[i] && s[i] != c)
+			i++;
+	}
+	return (count);
 }
 
-char **ft_split(char const *s, char c)
+static char	*ft_genword(char const *s, int start, int end)
 {
-    char     **words;
+	char	*word;
 
-    words = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
-    if (!words)
-        return (NULL);
-    ft_gen_words(words, s, c);
-    return (words);
+	word = (char *)malloc(sizeof(char) * (end - start + 1));
+	if (!word)
+		return (NULL);
+	word = ft_substr(s, start, end);
+	return (word);
 }
 
-// int main ()
-// {
-//     char *s;
-//     char **words;
+static void	ft_gen_words(char **words, char const *s, char c)
+{
+	int	i;
+	int	start;
+	int	k;
 
-//     s = "hello world ||||||||||||||||||||||||||||||sgfdsg|||||||||||||dsfffffffffgsdgfsdggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg|||||||||||||||||||||||||||||||||||||||||||||||||||||||";
-//     words = ft_split(s,'|');
-//     for (int i = 0; words[i]; i++)
-//         printf("%s\n", words[i]);
-//     return (0);
-// }
+	k = 0;
+	i = 0;
+	while (s[i])
+		if (s[i] != c)
+		{
+			start = i;
+			while (s[i] && s[i] != c)
+				i++;
+			words[k++] = ft_genword(s, start, i);
+			if (!words[k - 1])
+			{
+				ft_free(words, k);
+				return ;
+			}
+		}
+		else
+			i++;
+	words[k] = NULL;
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**words;
+
+	words = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
+	if (!words)
+		return (NULL);
+	ft_gen_words(words, s, c);
+	return (words);
+}
+/* ====================================Testing part=============================================
+int	main(void)
+{
+	char	*s;
+	char	**words;
+
+	s = "hello worldsgfdsgdsfffffffffgsdgfsdggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg|||||||||||||||||||||||||||||||||||||||||||||||||||||||";
+	words = ft_split(s, 'g');
+	for (int i = 0; words[i]; i++)
+	{
+			printf("%s\n", words[i]);
+	}
+	return (0);
+}
+===============================================================================================*/

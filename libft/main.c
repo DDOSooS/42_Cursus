@@ -1,7 +1,13 @@
 #include "libft.h"
-int main ()
+
+int	main(void)
 {
-    char *str = ft_strjoin("hello", "world");
-    printf("%s\n", str);
-    return 0;
+	char *s;
+	char **words;
+
+	s = "hello world ||||||||||||||||||||||||||||||sgfdsg|||||||||||||dsfffffffffgsdgfsdggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg|||||||||||||||||||||||||||||||||||||||||||||||||||||||";
+	words = ft_split(s, '|');
+	for (int i = 0; words[i]; i++)
+		printf("%s\n", words[i]);
+	return (0);
 }

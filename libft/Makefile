@@ -33,6 +33,6 @@ clean:
 fclean: clean
 	rm -rf $(name)
 
-re: fclean all
+re: fclean all bonus
 
 .PHONY: all clean fclean re bonus
