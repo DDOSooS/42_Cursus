@@ -14,26 +14,21 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char    *subs;
-	size_t  i;
+	char	*subs;
+	size_t	i;
 
 	i = 0;
 	subs = (char *)malloc(len + 1);
 	if (!subs)
 		return (NULL);
-	// printf("\n======start == %d=====end ==  %ld==,\n", start,len);
 	while (i + start < len && s[start + i])
 	{
 		subs[i] = s[start + i];
-        i++;
+		i++;
 	}
-	// printf("\n------------------- i==%ld-%c ----------\n",i,subs[i-1]);
-    subs[i] = '\0';
-	// printf("===========================================%s==%d\n\n",subs,ft_strlen(subs));
-	// reminder the null terminater is mandatory
+	subs[i] = '\0';
 	return (subs);
 }
-
 
 /*==================== TESTING Part ================
 int	main(void)

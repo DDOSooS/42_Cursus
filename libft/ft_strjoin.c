@@ -12,41 +12,36 @@
 
 #include "libft.h"
 
-char    *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    char    *str;
-    int        i;
-    int        j;
-    int        tlen;
+	char	*str;
+	int		i;
+	int		j;
+	int		tlen;
 
-    i = -1;
-    j = -1;
-    tlen = ft_strlen(s1) + ft_strlen(s2) + 1;
-    str = (char *)malloc(sizeof(char) * tlen);
-    if (!str)
-        return (NULL);
-    while (s1[++i]!= '\0')
-        str[i] = s1[i];
-    while (s2[++j]!= '\0')
-        str[i + j] = s2[j];
-    str[i + j] = '\0';
-    return (str);
+	i = -1;
+	j = -1;
+	tlen = ft_strlen(s1) + ft_strlen(s2) + 1;
+	str = (char *)malloc(sizeof(char) * tlen);
+	if (!str)
+		return (NULL);
+	while (s1[++i] != '\0')
+		str[i] = s1[i];
+	while (s2[++j] != '\0')
+		str[i + j] = s2[j];
+	str[i + j] = '\0';
+	return (str);
 }
 
-// #include <stdio.h>
+/*=============================Testing Part===============
+int    main(void)
+{
+    char    *str1 = "Hello";
+    char    *str2 = " World";
+    char    *str3 = ft_strjoin(str1, str2);
 
-// int    main(void)
-// {
-//     char    *str1 = "Hello";
-//     char    *str2 = " World";
-//     char    *str3 = ft_strjoin(str1, str2);
-
-//     printf("%s\n", str3);
-//     for (int i; i < 20;i++)
-//     {
-//         printf("%c", str3[i]);
-//     }
-//     free(str3);
-//     return (0);
-// }
-
+    printf("%s\n", str3);
+    free(str3);
+    return (0);
+}
+========================================================*/

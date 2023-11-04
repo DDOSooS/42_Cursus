@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-int ft_isalmun(int c)
+int	ft_isalmun(int c)
 {
-    if (ft_isalmun(c) || ft_isdigit(c))
-        return (1);
-    return (0);
+	if (ft_isalmun(c) || ft_isdigit(c))
+		return (1);
+	return (0);
 }

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_free(char **words, int size)
+static void	ft_free(char **words, int size)
 {
 	int	i;
 
@@ -23,9 +23,10 @@ void	ft_free(char **words, int size)
 		i++;
 	}
 	free(words);
+	words = NULL;
 }
 
-int	ft_count_words(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
 	int	count;
 	int	i;
@@ -64,6 +65,7 @@ static void	ft_gen_words(char **words, char const *s, char c)
 	k = 0;
 	i = 0;
 	while (s[i])
+	{
 		if (s[i] != c)
 		{
 			start = i;
@@ -71,13 +73,11 @@ static void	ft_gen_words(char **words, char const *s, char c)
 				i++;
 			words[k++] = ft_genword(s, start, i);
 			if (!words[k - 1])
-			{
-				ft_free(words, k);
-				return ;
-			}
+				return (ft_free(words, k));
 		}
 		else
 			i++;
+	}
 	words[k] = NULL;
 }
 
@@ -91,13 +91,13 @@ char	**ft_split(char const *s, char c)
 	ft_gen_words(words, s, c);
 	return (words);
 }
-/* ====================================Testing part=============================================
-int	main(void)
+
+/*==========>Testing part<============
 {
 	char	*s;
 	char	**words;
 
-	s = "hello worldsgfdsgdsfffffffffgsdgfsdggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg|||||||||||||||||||||||||||||||||||||||||||||||||||||||";
+	s = "hello worldsgfdsgdsf||||||";
 	words = ft_split(s, 'g');
 	for (int i = 0; words[i]; i++)
 	{
@@ -105,4 +105,4 @@ int	main(void)
 	}
 	return (0);
 }
-===============================================================================================*/
+==================================*/

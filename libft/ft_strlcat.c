@@ -12,28 +12,30 @@
 
 #include "libft.h"
 
-int ft_strlcat(char *dst, const char *src, size_t size)
+int	ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t  dlen;
-    size_t  slen;
+	size_t	dlen;
+	size_t	slen;
 
-    dlen = ft_strlen(dst);
-    slen = ft_strlen(src);
-    if (dlen >= size)
-        return (size + slen);
-    ft_memcpy(dst + dlen, src, size - dlen - 1);
-    dst[dlen + slen] = '\0';
-    return (dlen + slen);
+	dlen = ft_strlen(dst);
+	slen = ft_strlen(src);
+	if (dlen >= size)
+		return (size + slen);
+	ft_memcpy(dst + dlen, src, size - dlen - 1);
+	dst[dlen + slen] = '\0';
+	return (dlen + slen);
 }
 
-// int main(void)
-// {
-//     char dst[100];
-//     char src[100];
+/*============Testing part =============
+int main(void)
+{
+    char dst[100];
+    char src[100];
     
-//     strcpy(src, "abde");
-//     strcpy(dst, "gher");
-//     ft_strlcat(dst, src, 100);
-//     printf("%s\n", dst);
-//     return (0);
-// }
+    strcpy(src, "abde");
+    strcpy(dst, "gher");
+    ft_strlcat(dst, src, 100);
+    printf("%s\n", dst);
+    return (0);
+}
+========================================*/
