@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 23:24:35 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/07 23:24:38 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/08 13:24:11 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new);
 }
+
 /*=========================TESTING PART=======================
 
 void	del(void *content)

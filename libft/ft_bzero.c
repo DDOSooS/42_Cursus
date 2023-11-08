@@ -6,17 +6,17 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:50:16 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/02 23:01:52 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/08 13:14:01 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *buff, size_t n)
+void	ft_bzero(void *buff, size_t n)
 {
-    size_t  i;
-    
-    i = 0;
-    while (i < n)
-        ((char *)buff)[i++] = 0;
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	((char *)buff)[i++] = 0;
 }

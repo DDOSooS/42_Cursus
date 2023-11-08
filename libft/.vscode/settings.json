@@ -56,7 +56,7 @@
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "editor.defaultFormatter": "franneck94.c-cpp-runner",
+  "editor.defaultFormatter": "keyhr.42-c-format",
   "editor.tabCompletion": "on",
   "[c]": {
     "editor.defaultFormatter": "keyhr.42-c-format"
@@ -65,5 +65,7 @@
   "files.associations": {
     "*.embeddedhtml": "html",
     "string.h": "c"
-  }
+  },
+  "editor.insertSpaces": false,
+  "editor.stickyTabStops": true
 }
