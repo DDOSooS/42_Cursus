@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:13:15 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/05 22:22:01 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 00:32:10 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,18 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-// #include <stdio.h>
+/*=====================TESTING PART==================
+#include <stdio.h>
 
-// int    main(void)
-// {
-//     char    *str1 = "Hello";
-//     char    *str2 = " World";
-//     char    *str3 = ft_strjoin(str1, str2);
+int    main(void)
+{
+    char    *str1 = "Hello";
+    char    *str2 = " World";
+    char    *str3 = ft_strjoin(str1, str2);
 
-//     printf("%s\n", str3);
+    printf("%s\n", str3);
 
-//     free(str3);
-//     return (0);
-// } 
+    free(str3);
+    return (0);
+} 
+=====================================================*/

@@ -6,26 +6,26 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:43:01 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/05 14:40:34 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 00:24:26 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-    unsigned char   *d;
-    unsigned char   *s;
+	unsigned char   *d;
+	unsigned char   *s;
 
-    d = (unsigned char *)dest;
-    s = (unsigned char *)src;
-    if (dest == src || n == 0)
-        return (dest);
-    while (n--)
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	if (dest == src || n == 0)
+    	return (dest);
+	while (n--)
         *d++ = *s++;
-    // *post increment* pointers ensures that the copying is done at the byte level
     return (dest);
 }
+
 /*------------------- TESTING PART -----------------
 int main()
 {

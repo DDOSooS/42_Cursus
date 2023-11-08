@@ -6,13 +6,13 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 21:08:04 by aghergho          #+#    #+#             */
-/*   Updated: 2023/10/31 21:08:31 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 00:42:33 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 65 && c <= 90)
-        return (c + 32);
-    return (c);
+	if (c >= 65 && c <= 90)
+    	return (c + 32);
+	return (c);
 }

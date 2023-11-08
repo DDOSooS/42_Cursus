@@ -6,12 +6,11 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 19:12:55 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/08 13:08:42 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 00:29:06 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 static void	ft_free(char **words, int size)
 {

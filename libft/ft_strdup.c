@@ -6,35 +6,34 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:10:04 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/03 22:01:47 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 00:30:37 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    char    *new;
-    int     i;
-    int     len;
+	char	*new;
+	int		i;
+	int		len;
 
-    len = ft_strlen(s);
-    i = 0;
-    if (!s)
-        return (NULL);
-    new = (char *) malloc(len + 1);
-    if (!new)
-     return (NULL);
-    while (len >= 0)
-    {
-        new[i] = s[i];
-        i++;
-        len--;
-    }
-    new[i] = '\0';
-    return (new);
+	len = ft_strlen(s);
+	i = 0;
+	if (!s)
+    	return (NULL);
+	new = (char *) malloc(len + 1);
+	if (!new)
+		return (NULL);
+	while (len >= 0)
+	{
+		new[i] = s[i];
+		i++;
+		len--;
+	}
+	new[i] = '\0';
+	return (new);
 }
-
 
 /*=====================Testsing part===================
 int main ()
