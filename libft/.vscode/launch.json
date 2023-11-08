@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/ddos/Desktop/42_Cursus/libft",
-      "program": "/home/ddos/Desktop/42_Cursus/libft/build/Debug/outDebug",
+      "cwd": "/home/ddos/Desktop/takecare/42_Cursus/libft",
+      "program": "/home/ddos/Desktop/takecare/42_Cursus/libft/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

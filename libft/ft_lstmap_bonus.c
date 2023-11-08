@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 17:55:38 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/03 23:01:32 by aghergho         ###   ########.fr       */
+/*   Created: 2023/11/07 23:24:35 by aghergho          #+#    #+#             */
+/*   Updated: 2023/11/07 23:24:38 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,75 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
-	t_list	*help;
+	t_list	*new_node;
 
+	new = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
-	new = ft_lstnew(f(lst->content));
-	help = new;
-	lst = lst->next;
 	while (lst)
 	{
-		new->next = ft_lstnew(f(lst->content));
-		if (!new)
+		new_node = ft_lstnew(f(lst->content));
+		if (!new_node)
 		{
-			ft_lstclear(&help, del);
+			ft_lstclear(&new, del);
 			return (NULL);
 		}
-		new = new->next;
+		ft_lstadd_back(&new, new_node);
 		lst = lst->next;
 	}
 	return (new);
 }
+/*=========================TESTING PART=======================
+
+void	del(void *content)
+{
+	free(content);
+}
+
+void	*square_int(void *a)
+{
+	int	*result;
+
+	if (a)
+	{
+		result = (int *)malloc(sizeof(int));
+		if (result)
+		{
+			*result = (*(int *)a) * (*(int *)a);
+			// printf("Result: %d\n", *result); // Commented for final code
+			return ((void *)result);
+		}
+	}
+	return (NULL);
+}
+
+int	main(void)
+{
+	t_list	*lst;
+	t_list	*new_lst;
+	t_list	*temp;
+	int		*a;
+	int		*b;
+
+	a = (int *)malloc(sizeof(int));
+	if (!a)
+		return (0);
+	b = (int *)malloc(sizeof(int));
+	if (!b)
+		return (0);
+	*a = 3;
+	*b = 2;
+	lst = ft_lstnew((void *)a);
+	lst->next = ft_lstnew((void *)b);
+	new_lst = ft_lstmap(lst, square_int, del);
+	while (new_lst)
+	{
+		printf("%d\n", *(int *)new_lst->content);
+		temp = new_lst;
+		new_lst = new_lst->next;
+		free(temp->content);
+		free(temp);
+	}
+	return (0);
+}
+===========================================================*/

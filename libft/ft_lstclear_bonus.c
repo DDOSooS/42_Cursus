@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 01:55:22 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/03 22:56:27 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/07 22:01:01 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,15 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*current;
 	t_list	*next;
 
-	current = *lst;
 	if (!lst || !*lst || !del)
 		return ;
-	while (current)
+	current = *lst;
+    next = *lst;
+	while (current->next)
 	{
 		next = current->next;
-		del(current->content);
-		free(current);
+		ft_lstdelone(current, del);
 		current = next;
 	}
-	*lst = NULL;
+    *lst = NULL;
 }
-
-/*====================Testing part===================
-int main ()
-{
-    t_list *lst;
-
-    lst = NULL;
-    ft_lstclear(&lst, free);
-    return (0);
-}
-*/

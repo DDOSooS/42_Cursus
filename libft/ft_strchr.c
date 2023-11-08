@@ -12,26 +12,26 @@
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char *ft_strchr(const char *s, int c)
 {
-	int	i;
+    int i;
 
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i++;
-	}
-	return (NULL);
+    i = 0;
+    while (s[i])
+    {
+        if (s[i] == c)
+            return ((char *)&s[i]);
+        i++;
+    }
+    return (NULL);
 }
 
-/*=========TESTING PART==================
-int main(void)
-{
-    char *str;
+// int main(void)
+// {
+//     char *str;
 
-    str = "Hello World";
-    printf("%s\n", ft_strchr(str, 'o'));
-}
-========================================*/
+//     str = "Hello World";
+//     printf("%s\n", strchr(str, 'l'));
+//     printf("%s\n", ft_strchr(str, 'o'));
+
+// }

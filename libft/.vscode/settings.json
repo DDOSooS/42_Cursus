@@ -61,5 +61,9 @@
   "[c]": {
     "editor.defaultFormatter": "keyhr.42-c-format"
   },
-  "C_Cpp.errorSquiggles": "disabled"
+  "C_Cpp.errorSquiggles": "disabled",
+  "files.associations": {
+    "*.embeddedhtml": "html",
+    "string.h": "c"
+  }
 }

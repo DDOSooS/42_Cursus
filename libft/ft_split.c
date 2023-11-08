@@ -6,11 +6,12 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 19:12:55 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/04 15:39:38 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/08 13:08:42 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 static void	ft_free(char **words, int size)
 {
@@ -52,7 +53,7 @@ static char	*ft_genword(char const *s, int start, int end)
 	word = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!word)
 		return (NULL);
-	word = ft_substr(s, start, end);
+	word = ft_substr(s, start, end - start);
 	return (word);
 }
 
@@ -85,6 +86,8 @@ char	**ft_split(char const *s, char c)
 {
 	char	**words;
 
+	if (!s)
+		return (NULL);
 	words = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (!words)
 		return (NULL);
@@ -92,12 +95,13 @@ char	**ft_split(char const *s, char c)
 	return (words);
 }
 
-/*==========>Testing part<============
+/* ====================================Testing part=============================================
+int	main(void)
 {
 	char	*s;
 	char	**words;
 
-	s = "hello worldsgfdsgdsf||||||";
+	s = "hello worldsgfdsgdsfffffffffgsdgfsdg||||||||||||||||||||||||||||||||||||||";
 	words = ft_split(s, 'g');
 	for (int i = 0; words[i]; i++)
 	{
@@ -105,4 +109,44 @@ char	**ft_split(char const *s, char c)
 	}
 	return (0);
 }
-==================================*/
+
+int main() {
+    // Test 1: Split a simple string
+    char *input1 = "Hello,World";
+    char **result1 = ft_split(input1, ',');
+    for (int i = 0; result1[i] != NULL; i++) {
+        printf("Test 1 - Word %d: %s\n", i, result1[i]);
+        free(result1[i]);
+    }
+    free(result1);
+    printf("\n");
+
+    // Test 2: Split a string with multiple delimiters
+    char *input2 = "This is a test   string";
+    char **result2 = ft_split(input2, ' ');
+    for (int i = 0; result2[i] != NULL; i++) {
+        printf("Test 2 - Word %d: %s\n", i, result2[i]);
+        free(result2[i]);
+    }
+    free(result2);
+    printf("\n");
+
+    // Test 3: Split an empty string
+    char *input3 = "";
+    char **result3 = ft_split(input3, ' ');
+    if (result3 == NULL) {
+        printf("Test 3 - No words in the string (expected result)\n");
+    }
+    printf("\n");
+
+    // Test 4: Split a string with no delimiters
+    char *input4 = "OnlyOneWord";
+    char **result4 = ft_split(input4, ' ');
+    printf("Test 4 - Word 0: %s (the only word)\n", result4[0]);
+    free(result4[0]);
+    free(result4);
+    printf("\n");
+
+    return 0;
+}
+===============================================================================================*/
