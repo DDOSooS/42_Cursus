@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 15:25:39 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 12:05:24 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 12:14:07 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+/*===================first part======================================*/
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);

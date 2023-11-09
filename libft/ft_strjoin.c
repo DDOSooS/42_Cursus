@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:13:15 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 00:32:10 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 12:19:09 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = -1;
 	j = -1;
+	if (!s1 && !s2)
+		return (NULL);
 	tlen = ft_strlen(s1) + ft_strlen(s2) + 1;
 	str = (char *)malloc(sizeof(char) * tlen);
 	if (!str)
