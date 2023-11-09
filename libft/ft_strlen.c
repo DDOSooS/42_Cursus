@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:04:18 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 00:35:30 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:40:01 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ int	ft_strlen(const char *str)
 {
 	int	i;
 
-    if (!str)
+	if (!str)
 		return (0);
 	i = 0;
 	while (str[i] != '\0')

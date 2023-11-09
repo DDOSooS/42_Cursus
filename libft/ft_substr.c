@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:54:00 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 00:42:14 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:42:13 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start < t_len)
 	{
 		while (i < len && s[i + start])
-    	{
-        	subs[i] = s[i + start];
-        	i++;
+		{
+			subs[i] = s[i + start];
+			i++;
 		}
 	}
 	subs[i] = '\0';

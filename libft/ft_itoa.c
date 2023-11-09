@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:12:30 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/08 13:20:31 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:29:28 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ char	*ft_itoa(int n)
 		str[len--] = nb % 10 + '0';
 		nb /= 10;
 	}
-		if (nb)
-			str[len] = nb % 10 + '0';
+	if (nb)
+		str[len] = nb % 10 + '0';
 	return (str);
 }
 

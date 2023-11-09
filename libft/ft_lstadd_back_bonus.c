@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 01:49:13 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/08 13:21:11 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:43:30 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	temp= ft_lstlast(*lst);
+	temp = ft_lstlast(*lst);
 	temp->next = new;
 }

@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:43:01 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 00:24:26 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:26:53 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char   *d;
-	unsigned char   *s;
+	unsigned char	*d;
+	unsigned char	*s;
 
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
 	if (dest == src || n == 0)
-    	return (dest);
+		return (dest);
 	while (n--)
-        *d++ = *s++;
-    return (dest);
+		*d++ = *s++;
+	return (dest);
 }
 
 /*------------------- TESTING PART -----------------
@@ -38,3 +38,4 @@ int main()
     puts(str1);
     return 0;
 }
+---------------------------------------------------*/

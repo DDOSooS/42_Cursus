@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 23:05:16 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 00:25:27 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:40:37 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);   
+	write(fd, &c, 1);
 }

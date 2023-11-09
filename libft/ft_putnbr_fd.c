@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 23:14:55 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 00:26:19 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:21:07 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	nb;
-    char	digit;
+	char	digit;
 
 	nb = n;
 	if (nb < 0)
@@ -31,4 +31,3 @@ void	ft_putnbr_fd(int n, int fd)
 	digit = nb + '0';
 	ft_putchar_fd(digit, fd);
 }
-

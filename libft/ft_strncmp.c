@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 22:53:22 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 00:37:34 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:38:58 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	while (i < n - 1 && s1[i] == s2[i])
 		i++;
-	if (s1[i] !=  s2[i])
+	if (s1[i] != s2[i])
 		return (s1[i] - s2[i]);
 	return (0);
 }
@@ -38,4 +38,4 @@ int main ()
     printf("%d\n",ft_strncmp(s1, s2, 4));
     return (0);
 }
-===========================================
+===========================================*/

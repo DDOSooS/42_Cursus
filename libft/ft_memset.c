@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 00:24:43 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 00:25:14 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:28:11 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	*ft_memset(void *str, int c, size_t n)
 	{
 		((unsigned char *)str)[i] = (char)c;
 		i++;
-    }
+	}
 	return (str);
 }
-

@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:10:04 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 00:30:37 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:39:17 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *s)
 	len = ft_strlen(s);
 	i = 0;
 	if (!s)
-    	return (NULL);
+		return (NULL);
 	new = (char *) malloc(len + 1);
 	if (!new)
 		return (NULL);

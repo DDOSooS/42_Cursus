@@ -6,11 +6,11 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:31:26 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/08 13:11:54 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:37:36 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	sign;

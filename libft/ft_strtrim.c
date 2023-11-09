@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 17:01:23 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 00:41:08 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:37:00 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j--;
 	j++;
 	str = ft_sub(s1, i, j);
-    	if (!str)
-        	return (NULL);
+	if (!str)
+		return (NULL);
 	return (str);
 }
 

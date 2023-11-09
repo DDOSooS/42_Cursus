@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:53:10 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/08 13:22:49 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:28:49 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		tmp = tmp->next;
 	}
 }
-
