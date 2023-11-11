@@ -6,15 +6,15 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:31:26 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 11:37:36 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/11 12:06:52 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	sign;
-	int	result;
+	int		i;
+	long	sign;
+	long	result;
 
 	i = 0;
 	sign = 1;

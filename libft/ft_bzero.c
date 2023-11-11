@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:50:16 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/08 13:14:01 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/11 16:55:38 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_bzero(void *buff, size_t n)
 
 	i = 0;
 	while (i < n)
-	((char *)buff)[i++] = 0;
+		((char *)buff)[i++] = 0;
 }

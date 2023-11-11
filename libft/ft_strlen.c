@@ -6,11 +6,11 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:04:18 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 10:40:01 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/11 17:03:45 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 

@@ -23,8 +23,10 @@ all      : $(name)
 $(name)  : $(obj)
 	$(ar) $@ $^
 
-bonus    : $(obj_bonus)
-	$(ar) $(name_bonus) $^
+bonus: $(name_bonus)
+
+$(name_bonus): $(obj_bonus)
+	$(ar) $@ $^
 
 %.o      : %.c
 	$(CC) $(CFLAGS) -I. -c $< -o $@
@@ -39,4 +41,5 @@ re       :
 	$(MAKE) fclean
 	$(MAKE) all bonus
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
+
