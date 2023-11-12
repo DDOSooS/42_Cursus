@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:10:04 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 10:39:17 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/11 22:54:39 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,13 @@ char	*ft_strdup(const char *s)
 
 	len = ft_strlen(s);
 	i = 0;
-	if (!s)
-		return (NULL);
-	new = (char *) malloc(len + 1);
+	new = (char *) ft_calloc(sizeof(char), len + 1);
 	if (!new)
 		return (NULL);
-	while (len >= 0)
+	while (i < len)
 	{
 		new[i] = s[i];
 		i++;
-		len--;
 	}
 	new[i] = '\0';
 	return (new);
@@ -38,7 +35,7 @@ char	*ft_strdup(const char *s)
 /*=====================Testsing part===================
 int main ()
 {
-    char *s = "testing my finction  .";
+    char *s = "";
     char *new;
     new = ft_strdup(s);
     if (!new)
@@ -46,4 +43,4 @@ int main ()
     printf("%s\n", new);
     return (0);
 }
-=======================================================*/
+//=======================================================*/

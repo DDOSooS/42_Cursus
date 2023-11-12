@@ -6,24 +6,30 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 21:22:28 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/11 17:07:06 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:16:48 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	dlen;
-	size_t	slen;
+	size_t	len_dest;
+	size_t	len_src;
+	size_t	j;
 
-	dlen = ft_strlen(dst);
-	slen = ft_strlen(src);
-	if (dlen >= size)
-		return (size + slen);
-	ft_memcpy(dst + dlen, src, size - dlen - 1);
-	dst[dlen + slen] = '\0';
-	return (dlen + slen);
+	len_dest = ft_strlen(dest);
+	len_src = ft_strlen(src);
+	j = 0;
+	if (size < 1 || size <= len_dest)
+		return (len_src + size);
+	while (src[j] && (len_dest + j) < (size - 1))
+	{
+		dest[len_dest + j] = src[j];
+		j++;
+	}
+	dest[len_dest + j] = '\0';
+	return (len_src + len_dest);
 }
 
 /*===========TESTING PART==================

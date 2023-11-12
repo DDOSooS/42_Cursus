@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:54:00 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 11:42:13 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/11 23:12:48 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	t_len;
 
 	t_len = ft_strlen(s);
+	if (start >= t_len)
+		return (ft_strdup(""));
+	if (len > t_len - start)
+		len = t_len - start;
 	i = 0;
 	subs = (char *)malloc(sizeof(char) * (len + 1));
 	if (!subs)
 		return (NULL);
-	if (start < t_len)
+	while (i < len && s[i + start])
 	{
-		while (i < len && s[i + start])
-		{
-			subs[i] = s[i + start];
-			i++;
-		}
+		subs[i] = s[i + start];
+		i++;
 	}
 	subs[i] = '\0';
 	return (subs);
@@ -43,7 +44,7 @@ int	main(void)
 
 	str = "hello, i'm testing my function";
 	subs = ft_substr(str, 4, 3);
-	printf("%s\n", subs);
+	printf("%s\n", ft_substr("hola", 0, 18446744073709551615));
 	return (0);
 }
-===================================================*/
+//===================================================*/

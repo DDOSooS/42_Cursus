@@ -6,9 +6,11 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:04:18 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/11 17:03:45 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/11 17:48:25 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

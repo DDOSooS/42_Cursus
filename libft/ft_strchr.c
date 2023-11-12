@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 22:38:40 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/09 11:33:24 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/11 21:26:50 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (s[i])
+	while (i <= ft_strlen(s))
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
 		i++;
 	}
+	if (c == '\0')
+		return ((char *)(s + i));
 	return (NULL);
 }
 
@@ -32,8 +34,8 @@ int main(void)
      char *str;
 
      str = "Hello World";
-     printf("%s\n", strchr(str, 'l'));
-     printf("%s\n", ft_strchr(str, 'o'));
+     printf("%s\n", strchr(str, '\0'));
+     printf("%s\n", ft_strchr(str, '\0'));
 
 }
 --------------------------------------------*/
