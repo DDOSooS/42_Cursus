@@ -1,44 +1,75 @@
-CC       = gcc
-CFLAGS   = -Wall -Wextra -Werror
-ar       = ar rcs
-name     = libft.a
-name_bonus = libft_bonus.a
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aghergho <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/11/11 19:51:41 by aghergho          #+#    #+#              #
+#    Updated: 2023/11/12 16:50:44 by aghergho         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-src      =   ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
-            ft_memset.c ft_bzero.c ft_memcpy.c ft_strlcpy.c ft_strlcat.c ft_strlcat.c \
-            ft_tolower.c ft_toupper.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memcmp.c \
-            ft_memchr.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c \
-            ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
-            ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+# Name of the library
+NAME = libft.a
+BONUS = bonus
 
-src_bonus = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
-            ft_lstdelone_bonus.c ft_lstiter_bonus.c ft_lstlast_bonus.c ft_lstnew_bonus.c \
-            ft_lstsize_bonus.c ft_lstmap_bonus.c
+# Compiler and flags
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
 
-obj      = $(src:.c=.o)
-obj_bonus = $(src_bonus:.c=.o)
+AR = ar crs
 
-all      : $(name)
+# Source files for main functions
+SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
+      ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
+      ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c \
+      ft_memset.c ft_strchr.c ft_strdup.c ft_strlcat.c \
+      ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strnstr.c \
+      ft_strrchr.c ft_tolower.c ft_toupper.c ft_substr.c \
+      ft_strjoin.c ft_strtrim.c ft_putnbr_fd.c ft_putchar_fd.c \
+      ft_putstr_fd.c ft_putendl_fd.c ft_strmapi.c ft_striteri.c \
+      ft_itoa.c ft_split.c
 
-$(name)  : $(obj)
-	$(ar) $@ $^
+# Object files for main functions
+OBJ = $(SRC:.c=.o)
 
-bonus: $(name_bonus)
+# Source files for bonus functions
+BONUS_SRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
+            ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
-$(name_bonus): $(obj_bonus)
-	$(ar) $@ $^
+# Object files for bonus functions
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
-%.o      : %.c
-	$(CC) $(CFLAGS) -I. -c $< -o $@
+# Default target
+all: $(NAME)
 
-clean    :
-	rm -rf $(obj) $(obj_bonus)
+# Build the library
+$(NAME): $(OBJ)
 
-fclean   : clean
-	rm -rf $(name) $(name_bonus)
+$(BONUS): $(BONUS_OBJ) $(NAME)
 
-re       :
-	$(MAKE) fclean
-	$(MAKE) all bonus
+# Build object files for main functions
+$(OBJ): %.o: %.c
+	$(CC) $(CFLAGS) $< -c -o $@
+	$(AR) $(NAME) $@
 
-.PHONY: all clean fclean re
+# Build object files for bonus functions
+$(BONUS_OBJ): %.o: %.c
+	$(CC) $(CFLAGS) $< -c -o $@
+	$(AR) $(NAME) $@
+
+# Clean the object files
+clean:
+	rm -f $(OBJ) $(BONUS_OBJ)
+
+# Clean everything
+fclean: clean
+	rm -f $(NAME)
+
+# Clean and rebuild
+re: fclean all
+
+# Phony targets
+.PHONY: all clean fclean re bonus
+

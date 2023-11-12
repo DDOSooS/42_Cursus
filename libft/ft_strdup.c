@@ -6,7 +6,7 @@
 /*   By: aghergho <aghergho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:10:04 by aghergho          #+#    #+#             */
-/*   Updated: 2023/11/11 22:54:39 by aghergho         ###   ########.fr       */
+/*   Updated: 2023/11/12 12:54:44 by aghergho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,15 @@ char	*ft_strdup(const char *s)
 	int		len;
 
 	len = ft_strlen(s);
-	i = 0;
+	i = -1;
 	new = (char *) ft_calloc(sizeof(char), len + 1);
 	if (!new)
 		return (NULL);
-	while (i < len)
-	{
+	while (++i < len)
 		new[i] = s[i];
-		i++;
-	}
 	new[i] = '\0';
 	return (new);
 }
-
 /*=====================Testsing part===================
 int main ()
 {
