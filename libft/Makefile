@@ -6,7 +6,7 @@
 #    By: aghergho <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/11 19:51:41 by aghergho          #+#    #+#              #
-#    Updated: 2023/11/12 16:50:44 by aghergho         ###   ########.fr        #
+#    Updated: 2023/11/12 23:31:23 by aghergho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,13 +41,12 @@ BONUS_SRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstl
 # Object files for bonus functions
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
+# ...
 # Default target
 all: $(NAME)
 
 # Build the library
 $(NAME): $(OBJ)
-
-$(BONUS): $(BONUS_OBJ) $(NAME)
 
 # Build object files for main functions
 $(OBJ): %.o: %.c
@@ -58,6 +57,9 @@ $(OBJ): %.o: %.c
 $(BONUS_OBJ): %.o: %.c
 	$(CC) $(CFLAGS) $< -c -o $@
 	$(AR) $(NAME) $@
+
+# Bonus target
+bonus: $(BONUS_OBJ)
 
 # Clean the object files
 clean:
